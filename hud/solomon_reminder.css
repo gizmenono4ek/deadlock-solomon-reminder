@@ -1,0 +1,32 @@
+/* Solomon Piece Reminder: мигание иконки, когда скрипт повесил класс solomon_overdue */
+@keyframes 'SolomonReminderImage'
+{
+	0%   { wash-color: offBlack; brightness: 1; pre-transform-scale2d: 1; }
+	50%  { wash-color: #ff2a2a; brightness: 3; pre-transform-scale2d: 1.15; }
+	100% { wash-color: offBlack; brightness: 1; pre-transform-scale2d: 1; }
+}
+
+@keyframes 'SolomonReminderFrame'
+{
+	0%   { wash-color: #dab0ffc2; opacity: 1; }
+	50%  { wash-color: #ff2a2a; opacity: 1; }
+	100% { wash-color: #dab0ffc2; opacity: 1; }
+}
+
+.solomon_overdue .ability_image
+{
+	animation-name: SolomonReminderImage;
+	animation-duration: __BLINK__s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+.solomon_overdue .ability_bg,
+.solomon_overdue .ability_ring,
+.solomon_overdue .ability_key_container
+{
+	animation-name: SolomonReminderFrame;
+	animation-duration: __BLINK__s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
