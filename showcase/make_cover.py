@@ -17,7 +17,7 @@ F = Path(r"C:\Windows\Fonts")
 
 TITLE = "Don't Forget Your Pieces"
 KICKER = "SOLOMON  ·  HUD MOD"
-SUB = "Icon blinks red after 15 s of an unused piece.  Gold Queen, silver pieces."
+SUB = "Icon blinks red after 15 s of an unused piece."
 CREAM = (246, 236, 214)
 GOLD = (222, 180, 92)
 RED = (236, 72, 64)
@@ -265,11 +265,8 @@ def style_e(w, h):
         d.text((x, y), line, font=tf, fill=(250, 246, 238))
         y += int(ts * 0.9)
     y += int(28 * k)
-    sf = bahn(int(42 * k), "Bold SemiCondensed")
     d.text((x, y), "BLINKS AFTER 15 S  ·  RESETS WHEN YOU MOVE IT", font=fit_font_var(d, "BLINKS AFTER 15 S  ·  RESETS WHEN YOU MOVE IT", int(42 * k), w - 2 * x), fill=(236, 232, 224))
-    y += int(62 * k)
-    d.text((x, y), "GOLD QUEEN  ·  SILVER PIECES", font=sf, fill=GOLD)
-    y += int(66 * k)
+    y += int(70 * k)                             # строка «GOLD QUEEN · SILVER PIECES» убрана: цвета фигур переехали в Neon Squares
     d.text((x, y), "HUD only, no gameplay changes", font=bahn(int(30 * k), "SemiLight SemiCondensed"), fill=(150, 142, 132))
     # пиктограммы: обычная (приглушённая) -> мигающая (с красным свечением)
     big = int((440 if square else 540) * k)
