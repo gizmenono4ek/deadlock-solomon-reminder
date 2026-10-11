@@ -50,37 +50,7 @@ HUES = {
 #   g_vColorTint1 - умножает альбедо (текстура серо-кремовая, так что цвет ложится ровно, тени остаются);
 #   g_vSelfIllumTint1 - цвет свечения (включается игрой в «тёмном» состоянии фигуры);
 #   g_vSolidOutlineTint - цвет контура NPR.
-MATERIAL_OVERRIDES = {
-    # ферзь - золото
-    "models/heroes_wip/chessmaster/materials/chessmaster_queen.vmat_c": {
-        "g_vColorTint1": (1.00, 0.80, 0.32, 0.0),
-        "g_vAlbedoContrastSaturationBrightness1": (1.05, 1.10, 1.25, 0.0),
-        "g_vSelfIllumTint1": (1.00, 0.86, 0.42, 0.0),
-        "g_vSolidOutlineTint": (0.42, 0.26, 0.05, 0.0),
-    },
-    # обычные фигуры (слон, ладья, конь) - серебро
-    "models/heroes_wip/chessmaster/materials/chessmaster_bishop.vmat_c": {
-        "g_vColorTint1": (0.86, 0.90, 1.00, 0.0),
-        "g_vAlbedoContrastSaturationBrightness1": (1.05, 0.60, 1.30, 0.0),
-        "g_vSelfIllumTint1": (0.85, 0.90, 1.00, 0.0),
-        "g_vSolidOutlineTint": (0.20, 0.23, 0.30, 0.0),
-    },
-    "models/heroes_wip/chessmaster/materials/chessmaster_rook.vmat_c": {
-        "g_vColorTint1": (0.86, 0.90, 1.00, 0.0),
-        "g_vAlbedoContrastSaturationBrightness1": (1.05, 0.60, 1.30, 0.0),
-        "g_vSelfIllumTint1": (0.85, 0.90, 1.00, 0.0),
-        "g_vSolidOutlineTint": (0.20, 0.23, 0.30, 0.0),
-    },
-    "models/heroes_wip/chessmaster/materials/chessmaster_rookglow.vmat_c": {
-        "g_vSelfIllumTint1": (0.80, 0.86, 1.00, 0.0),
-    },
-    "models/heroes_wip/chessmaster/materials/chessmaster_knight.vmat_c": {
-        "g_vColorTint1": (0.86, 0.90, 1.00, 0.0),
-        "g_vAlbedoContrastSaturationBrightness1": (1.05, 0.60, 1.30, 0.0),
-        "g_vSelfIllumTint1": (0.85, 0.90, 1.00, 0.0),
-        "g_vSolidOutlineTint": (0.20, 0.23, 0.30, 0.0),
-    },
-}
+MATERIAL_OVERRIDES = {}   # золото/серебро фигур переехало в Solomon Neon Squares (neon_pieces.py), чтобы pak03 не перебивал неон
 # Как находим параметр в бинарнике: все векторные параметры материала (g_v* и Texture*-умолчания) лежат в
 # буфере 1 блока DATA подряд, по 4 double (32 байта), в алфавитном порядке имён - проверено на queen/knight/rook.
 # Якорь - любой параметр с уникальным значением; от него считаем смещение нужного имени.
