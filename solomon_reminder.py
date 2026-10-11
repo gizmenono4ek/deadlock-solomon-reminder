@@ -121,7 +121,8 @@ def patch_js(data, variant):
 
 def pack():
     import piece_colors
-    extra = piece_colors.collect()        # материалы/партиклы фигур
+    import ground_neon
+    extra = piece_colors.collect() + ground_neon.collect()   # материалы/партиклы фигур + неоновые клетки
     for variant in VARIANTS:
         entries = []
         for vpk_rel, (src, project_file) in FILES.items():
