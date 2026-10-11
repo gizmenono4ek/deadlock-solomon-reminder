@@ -1,4 +1,4 @@
-"""Deadlock mod: Solomon Piece Reminder (+ фиолетовый ферзь, см. piece_colors.py).
+"""Deadlock mod: Solomon Piece Reminder.
 
 Если у Соломона (внутреннее имя героя chessmaster) выставлена фигура (1 - слон, 4 - ферзь, конь тоже) и
 способность висит в состоянии «нажми ещё раз» дольше DELAY секунд без изменений, иконка способности мигает
@@ -120,8 +120,6 @@ def patch_js(data, variant):
 
 
 def pack():
-    import piece_colors
-    extra = piece_colors.collect()        # материалы/партиклы фигур
     for variant in VARIANTS:
         entries = []
         for vpk_rel, (src, project_file) in FILES.items():
@@ -129,7 +127,6 @@ def pack():
             if vpk_rel.endswith(".vjs_c"):
                 data = patch_js(data, variant)   # js компилируется для варианта solomon, остальным правим флаг
             entries.append((vpk_rel, data))
-        entries += extra
         for rel, data in entries:                       # самопроверка
             if rel.endswith((".vjs_c", ".vcss_c")):
                 t = js_text(data) if rel.endswith(".vjs_c") else (pano_text(data) or "")

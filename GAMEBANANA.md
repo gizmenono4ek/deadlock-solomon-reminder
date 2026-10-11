@@ -17,8 +17,6 @@ REMINDER
 - Heavy melee charge, dash, stuns and other short interruptions don't reset the timer, so no false alarms.
 - Only Solomon's icons are affected. Other heroes and items: nothing changes.
 
-Piece colors (gold Queen, silver pieces) moved to the separate Solomon Neon Squares mod, now with a bright neon glow outline on every piece.
-
 Purely visual: a HUD script (one Panorama layout + one tiny CSS + one JS). No gameplay changes, zero FPS impact.
 
 Screenshots are in-game shots.
@@ -40,8 +38,7 @@ The delay (15s) and blink speed are configurable if you build from source: githu
 
 ## Changelog
 v1.1
-- piece colors moved to Solomon Neon Squares (neon glow outline on pieces)
+- reminder only: piece models are no longer recolored (gold Queen / silver pieces removed)
 
 v1.0
 - red blink reminder after 15s on an unused piece, resets on any interaction with the piece
-- gold Queen, silver Bishop / Rook / Knight
