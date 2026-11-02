@@ -65,3 +65,34 @@ build.bat
 
 - Напоминание: поставить слона или ферзя и не трогать 15 с - иконка 1/4 должна замигать красным; убрать фигуру -
   погаснуть. Сразу после установки мигать не должно.
+
+## Восстановление с нуля
+
+В git лежит только исходный код. Папки `extract/` и `build/` в репозиторий не кладутся: это файлы игры (ресурсы Valve) и то, что
+из них собрано. Всё это пересоздаётся сборкой.
+
+1. Скачать проект:
+
+```bash
+git clone https://github.com/gizmenono4ek/deadlock-solomon-reminder.git DeadlockSolomonReminder
+```
+
+2. Поставить инструменты, если их нет на компьютере:
+
+- Deadlock из Steam. Путь по умолчанию `D:\SteamLibrary\steamapps\common\Deadlock`, иначе переменная `DEADLOCK`
+  (где путь зашит в скрипт, поправить в начале скрипта).
+- Python 3.12+ и пакеты: `pip install pillow lz4`.
+- [Reduced CSDK 12](https://deadlockmodding.pages.dev/modding-tools/csdk-12): распаковать в
+  `C:\Users\Alexd\Downloads\Reduced_CSDK_12\Reduced_CSDK_12` (так прописано в скриптах) или поправить путь `CSDK`.
+- Source 2 Viewer CLI: [релизы ValveResourceFormat](https://github.com/ValveResourceFormat/ValveResourceFormat/releases),
+  архив `cli-windows-x64.zip`, распаковать так, чтобы был
+  `C:\Users\Alexd\Documents\DeadlockNeonCrate\tools\cli\Source2Viewer-CLI.exe`
+  (папка `tools` у NeonCrate в git не входит, её тоже придётся скачать заново).
+
+3. Пересобрать:
+
+```bat
+build.bat
+```
+
+Подробности и варианты (`install universal`, `pack --raw` без CSDK) — в разделе «Сборка и установка» выше.
