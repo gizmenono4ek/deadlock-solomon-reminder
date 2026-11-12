@@ -86,7 +86,7 @@ git clone https://github.com/gizmenono4ek/deadlock-solomon-reminder.git Deadlock
   `C:\Users\Alexd\Downloads\Reduced_CSDK_12\Reduced_CSDK_12` (так прописано в скриптах) или поправить путь `CSDK`.
 - Source 2 Viewer CLI: [релизы ValveResourceFormat](https://github.com/ValveResourceFormat/ValveResourceFormat/releases),
   архив `cli-windows-x64.zip`, распаковать так, чтобы был
-  `C:\Users\Alexd\Documents\DeadlockNeonCrate\tools\cli\Source2Viewer-CLI.exe`
+  `C:\Users\Alexd\Documents\Deadlock\tools\cli\Source2Viewer-CLI.exe`
   (папка `tools` у NeonCrate в git не входит, её тоже придётся скачать заново).
 
 3. Пересобрать:
